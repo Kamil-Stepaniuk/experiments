@@ -1,0 +1,21 @@
+name: Reusable workflow1
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print name
+        run: echo ${{ inputs.username }}
+    
+      - name: print hello
+        run: echo "hello"
+      
+      - name: work
+        run: sleep 10

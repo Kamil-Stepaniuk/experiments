@@ -1,0 +1,15 @@
+name: Call a reusable workflow
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  call-reusable-workflow-1:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      username: mona
+  call-reusable-workflow-2:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      username: Kamil
